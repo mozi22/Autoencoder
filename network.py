@@ -51,10 +51,6 @@ def create_latent_space(enc, scope='latent_space', reuse=False):
         z_random = tf.random_normal(shape=tf.shape(enc), mean=0.0, stddev=1.0, dtype=tf.float32)
 
         latent_space = enc + sigma * z_random
-        print('latent space')
-        print(latent_space)
-        print(enc)
-        print(z_random)
 
         return latent_space
 
