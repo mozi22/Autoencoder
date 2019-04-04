@@ -1,7 +1,7 @@
 import tensorflow as tf
 import input_pipeline as inpp
 import losses_helper
-import datetime
+from datetime import datetime
 import network
 import os
 
@@ -11,10 +11,14 @@ class Autoencoder:
     def __init__(self):
         self.ckpt_folder = './ckpt/'
 
-        alternate_global_step = tf.placeholder(tf.int32)
+        self.global_step = tf.get_variable(
+                            'global_step', [],
+                            initializer=tf.constant_initializer(0), trainable=False)
+
+        self.alternate_global_step = tf.placeholder(tf.int32)
 
         self.MAX_ITERATIONS = 10000
-        self.learning_rate = tf.train.polynomial_decay(0.0001, alternate_global_step,
+        self.learning_rate = tf.train.polynomial_decay(0.0001, self.alternate_global_step,
                                                   self.MAX_ITERATIONS, 0.000001,
                                                   power=3)
 
@@ -31,7 +35,7 @@ class Autoencoder:
         self.loss = tf.reduce_mean(self.l1_loss + self.loss_kl_shared)
 
         self.opt = tf.train.AdamOptimizer(self.learning_rate, beta1=0.5, beta2=0.999).minimize(self.loss)
-
+        self.create_tensorboard()
 
     def get_summary_ops(self):
         train_summaries = []
@@ -55,10 +59,10 @@ class Autoencoder:
 
         self.loop_start = tf.train.global_step(self.sess, self.global_step)
         self.loop_stop = self.loop_start + self.MAX_ITERATIONS
-        self.alternate_global_step = tf.placeholder(tf.int32)
 
 
     def train(self):
+
         for step in range(self.loop_start, self.loop_stop + 1):
             _, loss = self.sess.run([self.opt, self.loss], feed_dict={
                 self.alternate_global_step: self.iteration
@@ -83,3 +87,4 @@ class Autoencoder:
 
 obj = Autoencoder()
 obj.create_network()
+obj.train()

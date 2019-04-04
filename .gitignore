@@ -8,6 +8,7 @@ __pycache__/
 
 rainy/
 .idea/
+ckpt/
 
 # Distribution / packaging
 .Python
