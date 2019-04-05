@@ -41,15 +41,14 @@ def dense_layer(name, inputs, units, activation=tf.nn.leaky_relu):
 def encoder(input_image,scope='encoder',reuse=False):
 
     with tf.variable_scope(scope,reuse=reuse):
-
+        print('enc')
         conv1 = conv(name='conv1', inputs=input_image, filters=32, kernel_size=7, stride=2, pad=3)
-        conv2 = conv(name='conv2', inputs=conv1, filters=64, kernel_size=5, stride=2, pad=1)
-        conv3 = conv(name='conv3', inputs=conv2, filters=128, kernel_size=5, stride=2, pad=1)
-        conv4 = conv(name='conv4', inputs=conv3, filters=256, kernel_size=3, stride=2, pad=1)
-        conv5 = conv(name='conv5', inputs=conv4, filters=512, kernel_size=3, stride=2, pad=1)
-
-
-        return conv5
+        print(conv1)
+        conv2 = conv(name='conv2', inputs=conv1, filters=64, kernel_size=3, stride=2, pad=1)
+        print(conv2)
+        conv3 = conv(name='conv3', inputs=conv2, filters=128, kernel_size=3, stride=2, pad=1)
+        print(conv3)
+        return conv3
 
 
 def create_latent_space(enc, scope='latent_space', reuse=False):
@@ -58,17 +57,13 @@ def create_latent_space(enc, scope='latent_space', reuse=False):
 
     with tf.variable_scope(scope, reuse=reuse):
 
-        print('jwab nahi')
-        print(enc)
         flattened_layer = tf.layers.flatten(enc)
-        print(flattened_layer)
-        z_mean = dense_layer('z_mean',flattened_layer, 8 * 8 * 512)
-        z_std = dense_layer('z_std',flattened_layer, 8 * 8 * 512)
+        z_mean = dense_layer('z_mean',flattened_layer, 1024)
+        z_std = dense_layer('z_std',flattened_layer, 1024)
 
 
         samples = tf.random_normal([4, 1024], 0, 1, dtype=tf.float32)
         latent_space = z_mean + (z_std * samples)
-
 
         return latent_space
 
@@ -77,14 +72,13 @@ def decoder(latent_space,scope='decoder',reuse=False):
 
     with tf.variable_scope(scope,reuse=reuse):
 
-        latent_space = tf.reshape(latent_space, [4, 8, 8, 512])
+        latent_space = dense_layer('recovered_layer',latent_space, 131072)
+        latent_space = tf.reshape(latent_space, [4, 32, 32, 128])
 
-        conv_tran5 = conv_transpose(name='conv5_transpose', inputs=latent_space, filters=512, kernel_size=3, stride=2)
-        conv_tran4 = conv_transpose(name='conv4_transpose', inputs=conv_tran5, filters=256, kernel_size=3, stride=2)
-        conv_tran3 = conv_transpose(name='conv3_transpose', inputs=conv_tran4, filters=128, kernel_size=3, stride=2)
-        conv_tran2 = conv_transpose(name='conv2_transpose', inputs=conv_tran3, filters=64, kernel_size=3, stride=2)
-        conv_tran1 = conv_transpose(name='conv1_transpose', inputs=conv_tran2, filters=3, kernel_size=1, stride=2, activation=tf.nn.tanh)
-
+        conv_tran4 = conv_transpose(name='conv4_transpose', inputs=latent_space, filters=128, kernel_size=3, stride=2)
+        conv_tran3 = conv_transpose(name='conv3_transpose', inputs=conv_tran4, filters=64, kernel_size=7, stride=2)
+        conv_tran2 = conv_transpose(name='conv2_transpose', inputs=conv_tran3, filters=32, kernel_size=1, stride=2)
+        conv_tran1 = conv_transpose(name='conv1_transpose', inputs=conv_tran2, filters=3, kernel_size=1, stride=1, activation=tf.nn.tanh)
         return conv_tran1
 
 def create_network(input):
