@@ -23,6 +23,7 @@ class Autoencoder:
                                                   power=3)
 
         self.dataset = inpp.parse()
+        print(self.dataset)
         self.iterator = self.dataset.make_initializable_iterator()
 
     def create_network(self):
