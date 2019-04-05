@@ -41,29 +41,19 @@ def dense_layer(name, inputs, units, activation=tf.nn.leaky_relu):
 def encoder(input_image,scope='encoder',reuse=False):
 
     with tf.variable_scope(scope,reuse=reuse):
-        print('enc')
         conv1 = conv(name='conv1', inputs=input_image, filters=32, kernel_size=7, stride=2, pad=3)
         print(conv1)
         conv2 = conv(name='conv2', inputs=conv1, filters=64, kernel_size=3, stride=2, pad=1)
-        print(conv2)
         conv3 = conv(name='conv3', inputs=conv2, filters=128, kernel_size=3, stride=2, pad=1)
-        print(conv3)
         return conv3
 
 
-def create_latent_space(enc, scope='latent_space', reuse=False):
-
-
-
+def create_latent_space(input, scope='shared_latent_space', reuse=False):
     with tf.variable_scope(scope, reuse=reuse):
+        sigma = 1.0
+        z_random = tf.random_normal(shape=tf.shape(input), mean=0.0, stddev=1.0, dtype=tf.float32)
 
-        flattened_layer = tf.layers.flatten(enc)
-        z_mean = dense_layer('z_mean',flattened_layer, 1024)
-        z_std = dense_layer('z_std',flattened_layer, 1024)
-
-
-        samples = tf.random_normal([4, 1024], 0, 1, dtype=tf.float32)
-        latent_space = z_mean + (z_std * samples)
+        latent_space = input + sigma * z_random
 
         return latent_space
 
@@ -83,7 +73,7 @@ def decoder(latent_space,scope='decoder',reuse=False):
 
 def create_network(input):
     enc = encoder(input)
-    latent_space = create_latent_space(enc)
+    latent_space, z_mean, z_std = create_latent_space(enc)
     dec = decoder(latent_space)
 
-    return dec, latent_space
+    return dec, latent_space, z_mean, z_std
