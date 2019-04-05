@@ -31,12 +31,9 @@ class Autoencoder:
 
         self.input_image = tf.image.resize_images(self.input_image, [128, 128])
 
-        self.resulting_img, self.latent_space, z_mean, z_std = network.create_network(self.input_image)
-
+        self.resulting_img, self.latent_space = network.create_network(self.input_image)
         self.l1_loss = losses_helper.reconstruction_loss_l1(self.resulting_img, self.input_image)
-        self.loss_kl_shared = losses_helper.KL_divergence_loss(z_mean, z_std)
-
-
+        self.loss_kl_shared = losses_helper.KL_divergence_loss(self.latent_space)
         self.loss = tf.reduce_mean(self.l1_loss + self.loss_kl_shared)
 
         self.opt = tf.train.AdamOptimizer(self.learning_rate, beta1=0.5, beta2=0.999).minimize(self.loss)
@@ -46,8 +43,8 @@ class Autoencoder:
         train_summaries = []
         train_summaries.append(tf.summary.image('InputImage', self.input_image))
         train_summaries.append(tf.summary.image('ResultImage', self.resulting_img))
-        train_summaries.append(tf.summary.scalar('KL_div', tf.reduce_mean(self.loss_kl_shared)))
-        train_summaries.append(tf.summary.scalar('L1_Loss', tf.reduce_mean(self.l1_loss)))
+        train_summaries.append(tf.summary.scalar('KL_div', self.loss_kl_shared))
+        train_summaries.append(tf.summary.scalar('L1_Loss', self.l1_loss))
 
         return train_summaries
 
