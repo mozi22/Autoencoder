@@ -10,7 +10,7 @@ MNIST_data/
 rainy/
 .idea/
 ckpt/
-
+MNIST_data/
 # Distribution / packaging
 .Python
 build/

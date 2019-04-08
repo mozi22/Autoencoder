@@ -10,7 +10,8 @@ import keras
 class Autoencoder:
 
     def __init__(self):
-        self.ckpt_folder = './ckpt/ckpt_mnist/'
+        self.TRAINING_NAME = 'xavier'
+        self.ckpt_folder = './ckpt/'+self.TRAINING_NAME+'/'
 
         self.global_step = tf.get_variable(
                             'global_step', [],
@@ -19,7 +20,7 @@ class Autoencoder:
         self.alternate_global_step = tf.placeholder(tf.int32)
 
         self.MAX_ITERATIONS = 200000
-        self.learning_rate = tf.train.polynomial_decay(0.00001, self.alternate_global_step,
+        self.learning_rate = tf.train.polynomial_decay(0.0001, self.alternate_global_step,
                                                   self.MAX_ITERATIONS, 0.000001,
                                                   power=3)
 
@@ -72,9 +73,9 @@ class Autoencoder:
         self.saver = tf.train.Saver(tf.global_variables())
         init = tf.global_variables_initializer()
 
-        config = tf.ConfigProto(
-            gpu_options=tf.GPUOptions(per_process_gpu_memory_fraction=0.05)
-        )
+        config = tf.ConfigProto()
+        config.gpu_options.per_process_gpu_memory_fraction = 0.7
+
         self.sess = tf.Session(config=config)
         self.sess.run(init)
         self.sess.run(self.iterator.initializer)
@@ -92,10 +93,10 @@ class Autoencoder:
                 self.alternate_global_step: self.iteration
             })
 
-            format_str = ('%s: step %d, g_loss = %.15f')
-            print((format_str % (datetime.now(), step, loss)))
+            format_str = ('%s: step %d, g_loss = %.15f, %s')
+            print((format_str % (datetime.now(), step, loss, self.TRAINING_NAME)))
 
-            if step % 100 == 0:
+            if step % 500 == 0:
                 summmary = self.sess.run(self.summary_op, feed_dict={
                     self.alternate_global_step: self.iteration
                 })
