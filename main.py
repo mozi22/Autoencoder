@@ -9,7 +9,10 @@ import os
 class Autoencoder:
 
     def __init__(self):
-        self.ckpt_folder = './ckpt/ckpt_kernel_init_changes/'
+
+        self.TRAINING_NAME = 'xavier'
+
+        self.ckpt_folder = './ckpt/'+self.TRAINING_NAME+'/'
 
         self.global_step = tf.get_variable(
                             'global_step', [],
@@ -76,8 +79,8 @@ class Autoencoder:
                 self.alternate_global_step: self.iteration
             })
 
-            format_str = ('%s: step %d, g_loss = %.15f')
-            print((format_str % (datetime.now(), step, loss)))
+            format_str = ('%s: step %d, g_loss = %.15f, %s')
+            print((format_str % (datetime.now(), step, loss, self.TRAINING_NAME)))
 
             if step % 500 == 0:
                 summmary = self.sess.run(self.summary_op, feed_dict={
