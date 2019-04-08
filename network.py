@@ -7,10 +7,10 @@ def conv(name,inputs, filters, kernel_size, stride, activation=tf.nn.leaky_relu,
     layer = tf.layers.conv2d(inputs=inputs,
                             filters=filters,
                             kernel_size=kernel_size,
-                            # kernel_initializer=tf.truncated_normal_initializer(stddev=0.02),
+                            kernel_initializer=tf.truncated_normal_initializer(stddev=1),
                             strides=stride,
-                            padding='VALID',
-                            # kernel_regularizer=tf.contrib.layers.l2_regularizer(scale=0.0001),
+                            padding='SAME',
+                            kernel_regularizer=tf.contrib.layers.l2_regularizer(scale=0.0001),
                             activation=activation,
                             name=name)
 
@@ -23,9 +23,9 @@ def conv_transpose(name,inputs, filters, kernel_size, stride, activation=tf.nn.l
                                        filters=filters,
                                        kernel_size=kernel_size,
                                        padding='SAME',
-                                       # kernel_initializer=tf.truncated_normal_initializer(stddev=0.02),
+                                       kernel_initializer=tf.truncated_normal_initializer(stddev=1),
                                        strides=stride,
-                                       # kernel_regularizer=tf.contrib.layers.l2_regularizer(scale=0.0001),
+                                       kernel_regularizer=tf.contrib.layers.l2_regularizer(scale=0.0001),
                                        activation=activation,
                                        name=name)
 

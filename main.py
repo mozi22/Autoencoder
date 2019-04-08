@@ -10,7 +10,7 @@ import keras
 class Autoencoder:
 
     def __init__(self):
-        self.ckpt_folder = './ckpt_mnist/'
+        self.ckpt_folder = './ckpt/ckpt_mnist/'
 
         self.global_step = tf.get_variable(
                             'global_step', [],
@@ -73,8 +73,7 @@ class Autoencoder:
         init = tf.global_variables_initializer()
 
         config = tf.ConfigProto(
-            gpu_options=tf.GPUOptions(per_process_gpu_memory_fraction=0.3),
-            device_count={'GPU': 1}
+            gpu_options=tf.GPUOptions(per_process_gpu_memory_fraction=0.05)
         )
         self.sess = tf.Session(config=config)
         self.sess.run(init)
