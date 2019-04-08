@@ -4,7 +4,7 @@ def reconstruction_loss_l1(prediction,gt):
 
 	with tf.variable_scope('reconstruction_loss_l2'):
 		loss = tf.reduce_mean(tf.square(prediction - gt))
-		loss = tf.losses.compute_weighted_loss(loss, weights=1000)
+		loss = tf.losses.compute_weighted_loss(loss, weights=1200)
 		# loss = tf.Print(loss, [loss], 'recon')
 	return loss
 

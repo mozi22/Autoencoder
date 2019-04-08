@@ -39,7 +39,7 @@ class Autoencoder:
         self.loss_kl_shared = losses_helper.KL_divergence_loss(z_mean, z_std)
         self.loss = tf.reduce_mean(self.l1_loss + self.loss_kl_shared)
 
-        self.opt = tf.train.AdamOptimizer(self.learning_rate, beta1=0.5, beta2=0.999).minimize(self.loss)
+        self.opt = tf.train.AdamOptimizer(self.learning_rate, beta1=0.5, beta2=0.999)
         self.grads = self.opt.compute_gradients(self.loss)
         self.apply_gradient_op = self.opt.apply_gradients(self.grads, global_step=self.global_step)
 
