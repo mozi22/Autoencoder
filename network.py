@@ -74,7 +74,7 @@ def decoder(latent_space,scope='decoder',reuse=False):
 
         conv_tran3 = conv_transpose(name='conv3_transpose', inputs=latent_space, filters=32, kernel_size=3, stride=2)
         conv_tran2 = conv_transpose(name='conv2_transpose', inputs=conv_tran3, filters=16, kernel_size=2, stride=2)
-        conv_tran1 = conv_transpose(name='conv1_transpose', inputs=conv_tran2, filters=3, kernel_size=1, stride=1, activation=tf.nn.tanh)
+        conv_tran1 = conv_transpose(name='conv1_transpose', inputs=conv_tran2, filters=3, kernel_size=1, stride=1, activation=tf.nn.sigmoid)
         return conv_tran1
 
 def create_network(input):
