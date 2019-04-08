@@ -26,8 +26,10 @@ class Autoencoder:
         train_images, train_labels, test_images, test_labels = self.get_mnist_dataset()
         images = tf.convert_to_tensor(train_images)
         images = tf.expand_dims(images, axis=-1)
+        images = tf.to_float(images)
 
         self.dataset = tf.data.Dataset.from_tensor_slices(images).repeat().shuffle(buffer_size=50).batch(4,True)
+
 
         # self.dataset = inpp.parse()
         self.iterator = self.dataset.make_initializable_iterator()
