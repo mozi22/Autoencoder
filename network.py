@@ -3,8 +3,10 @@ import keras
 
 def conv(name,inputs, filters, kernel_size, stride, activation=tf.nn.leaky_relu, pad=0):
 
-    inputs = tf.pad(inputs, [[0,0], [pad, pad], [pad, pad], [0,0]])
+    # inputs = tf.pad(inputs, [[0,0], [pad, pad], [pad, pad], [0,0]])
 
+    print(inputs)
+    print('ak')
     layer = tf.layers.conv2d(inputs=inputs,
                             filters=filters,
                             kernel_size=kernel_size,
@@ -13,6 +15,7 @@ def conv(name,inputs, filters, kernel_size, stride, activation=tf.nn.leaky_relu,
                             kernel_regularizer=tf.contrib.layers.l2_regularizer(scale=0.0001),
                             activation=activation,
                             name=name)
+    print('akk te')
 
     return layer
 
@@ -41,7 +44,9 @@ def dense_layer(name, inputs, units, activation=tf.nn.leaky_relu):
 def encoder(input_image,scope='encoder',reuse=False):
 
     with tf.variable_scope(scope,reuse=reuse):
-        conv1 = conv(name='conv1', inputs=input_image, filters=32, kernel_size=7, stride=2, pad=3)
+        print('wah')
+        print(input_image)
+        conv1 = conv(name='conv1', inputs=input_image, filters=32, kernel_size=4, stride=2, pad=3)
         conv2 = conv(name='conv2', inputs=conv1, filters=64, kernel_size=3, stride=2, pad=1)
         conv3 = conv(name='conv3', inputs=conv2, filters=128, kernel_size=3, stride=2, pad=1)
 

@@ -4,12 +4,13 @@ import losses_helper
 from datetime import datetime
 import network
 import os
+import keras
 
 
 class Autoencoder:
 
     def __init__(self):
-        self.ckpt_folder = './ckpt/'
+        self.ckpt_folder = './ckpt_mnist/'
 
         self.global_step = tf.get_variable(
                             'global_step', [],
@@ -18,23 +19,36 @@ class Autoencoder:
         self.alternate_global_step = tf.placeholder(tf.int32)
 
         self.MAX_ITERATIONS = 200000
-        self.learning_rate = tf.train.polynomial_decay(0.001, self.alternate_global_step,
+        self.learning_rate = tf.train.polynomial_decay(0.0001, self.alternate_global_step,
                                                   self.MAX_ITERATIONS, 0.000001,
                                                   power=3)
 
-        self.dataset = inpp.parse()
+        train_images, train_labels, test_images, test_labels = self.get_mnist_dataset()
+        images = tf.convert_to_tensor(train_images)
+        images = tf.expand_dims(images, axis=-1)
+
+        self.dataset = tf.data.Dataset.from_tensor_slices(images).repeat().shuffle(buffer_size=50).batch(4,True)
+
+        # self.dataset = inpp.parse()
         self.iterator = self.dataset.make_initializable_iterator()
+
+
+    def get_mnist_dataset(self):
+        fashion_mnist = keras.datasets.fashion_mnist
+        (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
+
+        return train_images, train_labels, test_images, test_labels
 
     def create_network(self):
         self.input_image = self.iterator.get_next()
 
 
-        self.input_image = tf.image.resize_images(self.input_image, [128, 128])
+        # self.input_image = tf.image.resize_images(self.input_image, [28, 28])
 
         self.resulting_img, self.latent_space, z_mean, z_std = network.create_network(self.input_image)
         self.l1_loss = losses_helper.reconstruction_loss_l1(self.resulting_img, self.input_image)
         self.loss_kl_shared = losses_helper.KL_divergence_loss(z_mean, z_std)
-        self.loss = tf.reduce_mean(self.l1_loss + self.loss_kl_shared)
+        self.loss = self.l1_loss + self.loss_kl_shared
 
         self.opt = tf.train.AdamOptimizer(self.learning_rate, beta1=0.5, beta2=0.999).minimize(self.loss)
         self.create_tensorboard()
