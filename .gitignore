@@ -9,7 +9,7 @@ __pycache__/
 rainy/
 .idea/
 ckpt/
-
+MNIST_data/
 # Distribution / packaging
 .Python
 build/
