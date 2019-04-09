@@ -18,14 +18,16 @@ def _parse_function(filename):
 
 
 def parse():
-  rainy_start = 637
-  rainy_end = 1207
+  # rainy_start = 637
+  # rainy_end = 1207
+  rainy_start = 1
+  rainy_end = 607
 
   rainy_files = []
 
   for i in range(rainy_start,rainy_end):
     file_id = "{0:0=4d}".format(i)
-    rainy_files.append('./rainy/000'+str(file_id)+'.jpeg')
+    rainy_files.append('./sunny/000'+str(file_id)+'.jpeg')
 
 
   rainy_filenames = tf.constant(rainy_files)
