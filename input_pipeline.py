@@ -27,7 +27,7 @@ def parse():
 
   for i in range(rainy_start,rainy_end):
     file_id = "{0:0=4d}".format(i)
-    rainy_files.append('./sunny/000'+str(file_id)+'.jpeg')
+    rainy_files.append('./datasets/sunny/000'+str(file_id)+'.jpeg')
 
 
   rainy_filenames = tf.constant(rainy_files)

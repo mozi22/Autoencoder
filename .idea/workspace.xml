@@ -2,10 +2,619 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="535d3669-5a2b-4f67-8fd6-91f65bf8775a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/VAE.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/VAE.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/losses_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/losses_helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_data/t10k-images-idx3-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_data/t10k-labels-idx1-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_data/train-images-idx3-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_data/train-labels-idx1-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000001.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000002.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000003.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000004.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000005.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000006.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000007.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000008.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000009.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000010.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000011.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000012.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000013.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000014.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000015.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000016.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000017.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000018.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000019.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000020.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000021.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000022.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000023.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000024.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000025.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000026.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000027.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000028.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000029.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000030.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000031.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000032.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000033.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000034.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000035.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000036.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000037.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000038.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000039.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000040.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000041.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000042.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000043.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000044.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000045.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000046.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000047.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000048.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000049.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000050.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000051.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000052.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000053.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000054.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000055.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000056.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000057.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000058.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000059.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000060.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000061.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000062.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000063.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000064.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000065.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000066.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000067.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000068.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000069.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000070.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000071.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000072.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000073.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000074.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000075.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000076.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000077.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000078.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000079.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000080.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000081.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000082.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000083.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000084.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000085.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000086.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000087.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000088.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000089.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000090.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000091.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000092.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000093.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000094.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000095.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000096.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000097.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000098.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000099.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000100.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000101.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000102.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000103.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000104.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000105.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000106.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000107.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000108.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000109.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000110.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000111.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000112.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000113.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000114.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000115.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000116.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000117.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000118.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000119.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000120.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000121.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000122.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000123.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000124.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000125.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000126.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000127.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000128.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000129.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000130.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000131.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000132.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000133.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000134.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000135.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000136.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000137.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000138.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000139.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000140.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000141.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000142.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000143.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000144.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000145.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000146.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000147.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000148.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000149.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000150.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000151.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000152.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000153.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000154.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000155.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000156.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000157.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000158.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000159.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000160.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000161.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000162.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000163.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000164.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000165.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000166.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000167.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000168.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000169.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000170.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000171.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000172.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000173.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000174.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000175.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000176.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000177.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000178.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000179.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000180.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000181.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000182.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000183.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000184.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000185.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000186.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000187.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000188.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000189.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000190.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000191.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000192.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000193.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000194.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000195.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000196.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000197.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000198.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000199.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000200.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000201.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000202.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000203.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000204.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000205.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000206.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000207.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000208.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000209.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000210.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000211.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000212.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000213.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000214.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000215.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000216.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000217.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000218.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000219.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000220.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000221.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000222.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000223.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000224.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000225.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000226.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000227.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000228.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000229.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000230.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000231.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000232.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000233.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000234.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000235.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000236.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000237.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000238.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000239.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000240.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000241.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000242.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000243.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000244.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000245.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000246.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000247.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000248.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000249.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000250.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000251.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000252.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000253.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000254.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000255.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000256.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000257.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000258.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000259.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000260.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000261.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000262.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000263.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000264.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000265.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000266.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000267.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000268.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000269.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000270.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000271.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000272.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000273.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000274.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000275.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000276.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000277.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000278.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000279.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000280.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000281.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000282.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000283.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000284.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000285.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000286.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000287.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000288.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000289.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000290.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000291.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000292.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000293.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000294.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000295.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000296.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000297.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000298.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000299.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000300.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000301.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000302.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000303.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000304.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000305.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000306.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000307.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000308.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000309.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000310.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000311.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000312.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000313.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000314.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000315.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000316.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000317.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000318.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000319.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000320.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000321.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000322.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000323.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000324.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000325.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000326.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000327.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000328.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000329.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000330.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000331.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000332.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000333.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000334.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000335.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000336.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000337.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000338.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000339.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000340.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000341.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000342.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000343.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000344.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000345.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000346.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000347.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000348.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000349.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000350.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000351.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000352.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000353.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000354.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000355.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000356.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000357.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000358.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000359.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000360.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000361.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000362.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000363.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000364.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000365.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000366.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000367.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000368.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000369.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000370.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000371.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000372.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000373.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000374.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000375.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000376.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000377.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000378.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000379.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000380.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000381.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000382.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000383.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000384.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000385.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000386.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000387.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000388.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000389.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000390.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000391.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000392.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000393.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000394.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000395.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000396.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000397.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000398.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000399.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000400.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000401.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000402.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000403.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000404.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000405.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000406.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000407.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000408.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000409.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000410.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000411.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000412.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000413.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000414.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000415.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000416.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000417.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000418.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000419.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000420.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000421.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000422.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000423.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000424.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000425.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000426.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000427.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000428.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000429.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000430.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000431.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000432.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000433.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000434.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000435.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000436.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000437.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000438.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000439.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000440.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000441.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000442.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000443.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000444.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000445.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000446.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000447.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000448.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000449.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000450.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000451.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000452.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000453.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000454.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000455.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000456.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000457.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000458.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000459.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000460.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000461.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000462.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000463.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000464.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000465.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000466.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000467.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000468.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000469.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000470.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000471.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000472.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000473.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000474.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000475.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000476.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000477.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000478.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000479.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000480.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000481.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000482.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000483.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000484.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000485.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000486.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000487.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000488.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000489.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000490.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000491.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000492.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000493.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000494.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000495.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000496.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000497.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000498.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000499.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000500.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000501.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000502.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000503.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000504.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000505.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000506.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000507.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000508.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000509.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000510.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000511.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000512.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000513.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000514.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000515.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000516.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000517.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000518.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000519.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000520.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000521.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000522.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000523.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000524.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000525.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000526.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000527.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000528.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000529.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000530.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000531.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000532.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000533.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000534.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000535.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000536.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000537.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000538.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000539.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000540.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000541.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000542.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000543.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000544.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000545.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000546.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000547.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000548.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000549.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000550.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000551.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000552.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000553.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000554.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000555.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000556.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000557.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000558.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000559.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000560.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000561.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000562.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000563.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000564.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000565.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000566.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000567.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000568.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000569.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000570.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000571.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000572.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000573.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000574.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000575.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000576.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000577.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000578.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000579.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000580.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000581.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000582.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000583.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000584.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000585.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000586.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000587.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000588.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000589.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000590.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000591.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000592.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000593.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000594.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000595.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000596.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000597.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000598.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000599.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000600.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000601.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000602.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000603.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000604.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000605.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunny/0000606.jpeg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +627,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -27,11 +636,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="80" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
+            <state relative-caret-position="390">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -39,8 +648,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-680">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="250">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
         </entry>
@@ -54,11 +663,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/input_pipeline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="12" />
+            <state relative-caret-position="345">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -87,8 +696,8 @@
       <find>self.alternate_global_step</find>
       <find>15000</find>
       <find>for</find>
-      <find>dense_layer</find>
       <find>compute_gradients</find>
+      <find>dense_layer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,11 +707,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/losses.py" />
-        <option value="$PROJECT_DIR$/input_pipeline.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/losses_helper.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/network.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/input_pipeline.py" />
       </list>
     </option>
   </component>
@@ -133,6 +742,11 @@
               <item name="Autoencoder" type="462c0819:PsiDirectoryNode" />
               <item name="ckpt" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Autoencoder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Autoencoder" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -144,6 +758,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/datasets" />
       <recent name="$PROJECT_DIR$/ckpt" />
     </key>
   </component>
@@ -176,7 +792,7 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -187,7 +803,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.35005224" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.35005224" />
       <window_info anchor="bottom" id="Python Console" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -196,7 +812,7 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rainy/0000637.jpeg">
+    <entry file="file://$PROJECT_DIR$/datasets/rainy/0000637.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ckpt/model.ckpt-2000.index" />
@@ -207,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-680">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/losses_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -221,27 +830,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input_pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state relative-caret-position="255">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/network.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="80" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
         </state>
       </provider>
     </entry>
