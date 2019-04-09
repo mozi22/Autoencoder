@@ -10,7 +10,7 @@ class Autoencoder:
 
     def __init__(self):
 
-        self.TRAINING_NAME = 'mnist'
+        self.TRAINING_NAME = 'sunny'
 
         self.ckpt_folder = './ckpt/'+self.TRAINING_NAME+'/'
 
@@ -20,17 +20,17 @@ class Autoencoder:
 
         self.alternate_global_step = tf.placeholder(tf.int32)
 
-        self.MAX_ITERATIONS = 50000
+        self.MAX_ITERATIONS = 30000
         self.learning_rate = tf.train.polynomial_decay(0.0001, self.alternate_global_step,
                                                   self.MAX_ITERATIONS, 0.000001,
                                                   power=3)
 
-        # self.dataset = inpp.parse()
-        # self.iterator = self.dataset.make_initializable_iterator()
-        (train_images, train_labels), (test_images, test_labels) = tf.keras.datasets.mnist.load_data()
-        train_images = tf.to_float(tf.expand_dims(tf.convert_to_tensor(train_images), axis=-1))
-        train_images = tf.image.per_image_standardization(train_images)
-        self.iterator = tf.data.Dataset.from_tensor_slices(train_images).repeat().shuffle(buffer_size=50).batch(4,True).make_initializable_iterator()
+        self.dataset = inpp.parse()
+        self.iterator = self.dataset.make_initializable_iterator()
+        # (train_images, train_labels), (test_images, test_labels) = tf.keras.datasets.mnist.load_data()
+        # train_images = tf.to_float(tf.expand_dims(tf.convert_to_tensor(train_images), axis=-1))
+        # train_images = tf.image.per_image_standardization(train_images)
+        # self.iterator = tf.data.Dataset.from_tensor_slices(train_images).repeat().shuffle(buffer_size=50).batch(4,True).make_initializable_iterator()
 
     def create_network(self):
         self.input_image = self.iterator.get_next()

@@ -9,9 +9,9 @@ def _parse_function(filename):
   # r_image_decoded = tf.divide(r_image_decoded,[255])
 
 
-  r_image_decoded_std = tf.image.per_image_standardization(r_image_decoded)
 
-  r_image_decoded_std = tf.image.resize_images(r_image_decoded_std,[128,128])
+  r_image_decoded_std = tf.image.resize_images(r_image_decoded,[128,128])
+  r_image_decoded_std = tf.image.per_image_standardization(r_image_decoded_std)
 
   return r_image_decoded_std
 
