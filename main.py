@@ -10,7 +10,7 @@ import keras
 class Autoencoder:
 
     def __init__(self):
-        self.TRAINING_NAME = 'xavier'
+        self.TRAINING_NAME = 'mnist'
         self.ckpt_folder = './ckpt/'+self.TRAINING_NAME+'/'
 
         self.global_step = tf.get_variable(
@@ -53,7 +53,15 @@ class Autoencoder:
         self.loss_kl_shared = losses_helper.KL_divergence_loss(z_mean, z_std)
         self.loss = self.l1_loss + self.loss_kl_shared
 
-        self.opt = tf.train.AdamOptimizer(self.learning_rate, beta1=0.5, beta2=0.999).minimize(self.loss)
+        self.opt = tf.train.AdamOptimizer(self.learning_rate, beta1=0.5, beta2=0.999)
+        self.grads = self.opt.compute_gradients(self.loss)
+        self.apply_gradient_op = self.opt.apply_gradients(self.grads, global_step=self.global_step)
+
+        variable_averages = tf.train.ExponentialMovingAverage(
+            0.9999, self.global_step)
+        self.variables_averages_op = variable_averages.apply(tf.trainable_variables())
+        self.train_op = tf.group(self.apply_gradient_op, self.variables_averages_op)
+
         self.create_tensorboard()
 
     def get_summary_ops(self):
@@ -64,6 +72,10 @@ class Autoencoder:
         train_summaries.append(tf.summary.scalar('L1_Loss', self.l1_loss))
         for var in tf.trainable_variables():
             train_summaries.append(tf.summary.histogram(var.op.name, var))
+
+        for grad, var in self.grads:
+            if grad is not None:
+                train_summaries.append(tf.summary.histogram(var.op.name + '/gradients', grad))
 
         return train_summaries
 
@@ -89,14 +101,14 @@ class Autoencoder:
     def train(self):
 
         for step in range(self.loop_start, self.loop_stop + 1):
-            _, loss = self.sess.run([self.opt, self.loss], feed_dict={
+            _, loss = self.sess.run([self.train_op, self.loss], feed_dict={
                 self.alternate_global_step: self.iteration
             })
 
             format_str = ('%s: step %d, g_loss = %.15f, %s')
             print((format_str % (datetime.now(), step, loss, self.TRAINING_NAME)))
 
-            if step % 500 == 0:
+            if step % 100 == 0:
                 summmary = self.sess.run(self.summary_op, feed_dict={
                     self.alternate_global_step: self.iteration
                 })
