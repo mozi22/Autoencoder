@@ -10,7 +10,7 @@ class Autoencoder:
 
     def __init__(self):
 
-        self.TRAINING_NAME = 'loss_weights_balanced'
+        self.TRAINING_NAME = 'mnist'
 
         self.ckpt_folder = './ckpt/'+self.TRAINING_NAME+'/'
 
@@ -20,24 +20,27 @@ class Autoencoder:
 
         self.alternate_global_step = tf.placeholder(tf.int32)
 
-        self.MAX_ITERATIONS = 200000
+        self.MAX_ITERATIONS = 50000
         self.learning_rate = tf.train.polynomial_decay(0.0001, self.alternate_global_step,
                                                   self.MAX_ITERATIONS, 0.000001,
                                                   power=3)
 
-        self.dataset = inpp.parse()
-        self.iterator = self.dataset.make_initializable_iterator()
+        # self.dataset = inpp.parse()
+        # self.iterator = self.dataset.make_initializable_iterator()
+        (train_images, train_labels), (test_images, test_labels) = tf.keras.datasets.mnist.load_data()
+        train_images = tf.to_float(tf.expand_dims(tf.convert_to_tensor(train_images), axis=-1))
+        train_images = tf.image.per_image_standardization(train_images)
+        self.iterator = tf.data.Dataset.from_tensor_slices(train_images).repeat().shuffle(buffer_size=50).batch(4,True).make_initializable_iterator()
 
     def create_network(self):
         self.input_image = self.iterator.get_next()
 
+        # self.input_image = tf.image.resize_images(self.input_image, [28, 28])
 
-        self.input_image = tf.image.resize_images(self.input_image, [128, 128])
-
-        self.resulting_img, self.latent_space, z_mean, z_std = network.create_network(self.input_image)
+        self.resulting_img, self.latent_space = network.create_network(self.input_image)
         self.l1_loss = losses_helper.reconstruction_loss_l1(self.resulting_img, self.input_image)
-        self.loss_kl_shared = losses_helper.KL_divergence_loss(z_mean, z_std)
-        self.loss = tf.reduce_mean(self.l1_loss + self.loss_kl_shared)
+        # self.loss_kl_shared = losses_helper.KL_divergence_loss(z_mean, z_std)
+        self.loss = tf.reduce_mean(self.l1_loss)
 
         self.opt = tf.train.AdamOptimizer(self.learning_rate, beta1=0.5, beta2=0.999)
         self.grads = self.opt.compute_gradients(self.loss)
@@ -54,7 +57,6 @@ class Autoencoder:
         train_summaries = []
         train_summaries.append(tf.summary.image('InputImage', self.input_image))
         train_summaries.append(tf.summary.image('ResultImage', self.resulting_img))
-        train_summaries.append(tf.summary.scalar('KL_div', tf.reduce_mean(self.loss_kl_shared)))
         train_summaries.append(tf.summary.scalar('L1_Loss', self.l1_loss))
         for var in tf.trainable_variables():
             train_summaries.append(tf.summary.histogram(var.op.name, var))
